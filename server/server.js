@@ -4,6 +4,8 @@ const router=require('./router/auth-router')
 
 const PORT=5000;
 
+app.use(express.json());
+
 app.use('/api/auth',router)
 
 app.get('/',(req,res)=>{

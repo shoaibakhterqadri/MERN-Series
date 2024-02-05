@@ -9,4 +9,13 @@ const login= async (req,res)=>{
     }
 }
 
-module.exports={login}
+const register = async (req,res)=>{
+try {
+    console.log(req.body);
+    res.status(200).send({message:req.body})
+} catch (error) {
+    
+}
+}
+
+module.exports={login,register}

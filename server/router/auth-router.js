@@ -1,9 +1,10 @@
 const express=require('express');
 const router=express.Router();
-const {login}=require('../controller/auth-controller')
+const {login,register}=require('../controller/auth-controller')
 
 
 router.get('/login',login)
+router.post('/register',register)
 
 // OR you may write this also 
 
