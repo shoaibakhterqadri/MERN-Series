@@ -1,5 +1,5 @@
 const mongoose=require('mongoose');
-const URI='mongodb+srv://mern-series:mern-series@cluster0.lnrfpst.mongodb.net/'
+const URI=process.env.MONGODB_URI
 
 const connectDb=async ()=>{
     try {
