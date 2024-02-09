@@ -34,7 +34,8 @@ const login = async (req, res) => {
     if (!userExists) {
       return res.status(404).json({ msg: "User not Found" });
     }
-    const user = await bcrypt.compare(password, userExists.password);
+    // const user = await bcrypt.compare(password, userExists.password);
+    const user=await userExists.comparePassword(password);
     if (user) {
       res.status(200).json({
         msg: "User successfully",
